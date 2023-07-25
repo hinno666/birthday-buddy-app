@@ -6,7 +6,7 @@ const List = ({ people, deletePerson }) => {
             {people.map((person) => {
                 const { id, name, age, image } = person;
                 return (
-                    <People deletePerson={deletePerson} key={id} name={name} age={age} image={image} />
+                    <People deletePerson={() => deletePerson(id)} key={id} name={name} age={age} image={image} />
                 )
             })}
         </section>
